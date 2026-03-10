@@ -1,10 +1,17 @@
 package com.legado.servico_de_pdf.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "boletos")
 public class Boleto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String banco;
     private String beneficiario;
@@ -21,11 +28,15 @@ public class Boleto {
     private String numeroPlano;
     private String competencia;
     private String codigoBarras;
+    private String barcodeBase64;
 
     public Boleto() {
     }
 
     // GETTERS E SETTERS
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
     public String getBanco() { return banco; }
     public void setBanco(String banco) { this.banco = banco; }
@@ -56,4 +67,7 @@ public class Boleto {
 
     public String getCodigoBarras() { return codigoBarras; }
     public void setCodigoBarras(String codigoBarras) { this.codigoBarras = codigoBarras; }
+
+    public String getBarcodeBase64() { return barcodeBase64; }
+    public void setBarcodeBase64(String barcodeBase64) { this.barcodeBase64 = barcodeBase64; }
 }

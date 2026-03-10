@@ -53,15 +53,4 @@ mvn dependency:tree
 mvn clean install
 mvn spring-boot:run
 
-{
-"banco": "001 - Banco do Brasil",
-"beneficiario": "APRYASE Serviços Médicos LTDA",
-"pagador": "Maria Silva Santos",
-"valor": 289.90,
-"vencimento": "2026-02-28",
-"linhaDigitavel": "00190.00009 01234.567890 12345.678901 1 98760000028990",
-"cpf": "123.456.789-09",
-"numeroPlano": "PLN-45879",
-"competencia": "02/2026",
-"codigoBarras": "00191987600000289900000012345678901234567890"
-}
+ 
