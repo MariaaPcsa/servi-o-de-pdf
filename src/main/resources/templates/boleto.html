@@ -1,0 +1,92 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8"/>-->
+<!--    <title>Boleto Bancário</title>-->
+
+<!--    <style>-->
+<!--        body { font-family: Arial, sans-serif; font-size: 12px; }-->
+<!--        table { width: 100%; border-collapse: collapse; }-->
+<!--        td { border: 1px solid #000; padding: 6px; vertical-align: top; }-->
+<!--        .sem-borda td { border: none; }-->
+<!--        .titulo { font-size: 18px; font-weight: bold; }-->
+<!--        .valor-grande { font-size: 16px; font-weight: bold; }-->
+<!--        .linha-digitavel { font-weight: bold; text-align: center; letter-spacing: 2px; padding: 8px; }-->
+<!--        .codigo-barras { text-align: center; font-family: monospace; font-size: 28px; margin-top: 20px; }-->
+<!--        .recibo { margin-top: 30px; font-size: 11px; }-->
+<!--        .page-break { page-break-after: always; }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; TABELA PRINCIPAL &ndash;&gt;-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td width="20%"><strong th:text="${boleto.banco}">237-2</strong></td>-->
+<!--        <td width="50%" align="center"><span class="titulo">BOLETO BANCÁRIO</span></td>-->
+<!--        <td width="30%" align="right">-->
+<!--            Vencimento<br/>-->
+<!--            <strong th:text="${#temporals.format(boleto.vencimento,'dd/MM/yyyy')}">30/03/2026</strong>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td colspan="3" class="linha-digitavel" th:text="${boleto.linhaDigitavel}">-->
+<!--            23790.00000 00000.000000 00000.000000 0 15075-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td colspan="3">-->
+<!--            <strong>Beneficiário:</strong>-->
+<!--            <span th:text="${boleto.beneficiario}">Maria Correia</span>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td colspan="3">-->
+<!--            <strong>Pagador:</strong>-->
+<!--            <span th:text="${boleto.pagador}">Maria Correia</span>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td colspan="3">-->
+<!--            <strong>CPF:</strong>-->
+<!--            <span th:text="${boleto.cpf}">123.456.789-09</span>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <td colspan="2">-->
+<!--            <strong>Competência:</strong>-->
+<!--            <span th:text="${boleto.competencia}">03/2026</span>-->
+<!--        </td>-->
+<!--        <td align="right">-->
+<!--            Valor Documento<br/>-->
+<!--            <span class="valor-grande">-->
+<!--                R$ <span th:text="${#numbers.formatDecimal(boleto.valor,1,'POINT',2,'COMMA')}">150,75</span>-->
+<!--            </span>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<!--&lt;!&ndash; CÓDIGO DE BARRAS &ndash;&gt;-->
+<!--<div class="codigo-barras">-->
+<!--    <span th:text="${boleto.codigoBarras}">00191987600000289900000012345678901234567890</span>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; RECIBO &ndash;&gt;-->
+<!--<hr style="margin-top:30px; border-top:1px dashed #000;" />-->
+<!--<div class="recibo">-->
+<!--    <strong>Recibo do Pagador</strong><br />-->
+<!--    Pagador: <span th:text="${boleto.pagador}"></span><br />-->
+<!--    Valor: R$-->
+<!--    <span th:text="${#numbers.formatDecimal(boleto.valor,1,'POINT',2,'COMMA')}"></span>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; PULAR PÁGINA &ndash;&gt;-->
+<!--<div class="page-break"></div>-->
+
+<!--</body>-->
+<!--</html>-->
