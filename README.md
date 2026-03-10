@@ -54,9 +54,9 @@ mvn clean install
 mvn spring-boot:run
 
 {
-"banco": "001 - Banco do Brasil",
-"beneficiario": "APRYASE Serviços Médicos LTDA",
-"pagador": "Maria Silva Santos",
+"banco": "001 - Banco do nosso dinheiro",
+"beneficiario": " Serviços Médicos LTDA",
+"pagador": "Maria Silva",
 "valor": 289.90,
 "vencimento": "2026-02-28",
 "linhaDigitavel": "00190.00009 01234.567890 12345.678901 1 98760000028990",
